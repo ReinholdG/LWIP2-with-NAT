@@ -338,6 +338,10 @@ struct netif {
   u16_t loop_cnt_current;
 #endif /* LWIP_LOOPBACK_MAX_PBUFS */
 #endif /* ENABLE_LOOPBACK */
+
+#if IP_NAPT
+  u8_t napt;
+#endif
 };
 
 #if LWIP_CHECKSUM_CTRL_PER_NETIF
