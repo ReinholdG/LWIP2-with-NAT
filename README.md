@@ -1,3 +1,6 @@
+This is an attempt to implement NAT in the LWIP2 for Arduino or the ESP8266
+It's based on the original LWIP2 from d-a-v and uses the development of Martin-Ger from the project "esp-open-lwip" https://github.com/martin-ger/esp-open-lwip
+
 ```make install```: download, compile, install lwip2
 
 ```make download```: download lwIP-2 builder
