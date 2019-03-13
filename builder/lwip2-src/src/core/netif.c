@@ -983,10 +983,6 @@ netif_poll_all(void)
 #endif /* !LWIP_NETIF_LOOPBACK_MULTITHREADING */
 #endif /* ENABLE_LOOPBACK */
 
-#if IP_NAPT
-  netif->napt = 0;
-#endif /* IP_NAPT */
-
 #if LWIP_NUM_NETIF_CLIENT_DATA > 0
 /**
  * @ingroup netif_cd

@@ -2852,6 +2852,14 @@
 #if !defined IP6_DEBUG || defined __DOXYGEN__
 #define IP6_DEBUG                       LWIP_DBG_OFF
 #endif
+
+/**
+ * NAPT_DEBUG: Enable debugging for NAPT.
+ */
+#if !defined NAPT_DEBUG || defined __DOXYGEN__
+#define NAPT_DEBUG                       LWIP_DBG_OFF
+#endif
+
 /**
  * @}
  */

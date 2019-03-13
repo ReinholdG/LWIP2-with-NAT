@@ -321,20 +321,6 @@ icmp_time_exceeded(struct pbuf *p, enum icmp_te_type t)
 
 #endif /* IP_FORWARD || IP_REASSEMBLY */
 
-#if IP_FORWARD
-/**
- * See RFC 1191, the difference here is
- *  we will always send message too large, even if DF bit is 0.
- *
- * @param p the input packet for which the too large should be sent,
- *      p->payload pointing to the IP header.
- * @param mtu maximum transmission unit.
- */
-void ICACHE_FLASH_ATTR icmp_datagram_too_big(struct pbuf *p, u16_t mtu) {
-        icmp_send_response(p, ICMP_DUR, ICMP_DUR_FRAG, mtu);
-}
-#endif
-
 /**
  * Send an icmp packet in response to an incoming packet.
  *
