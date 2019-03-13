@@ -664,7 +664,22 @@
  * interface, define this to 0.
  */
 #if !defined IP_FORWARD || defined __DOXYGEN__
-#define IP_FORWARD                      0
+#define IP_FORWARD                      1
+#endif
+/**
+ * IP_NAPT==1: Enables the ability to do Network Address Port Translation (NAPT) 
+ * on forwarded packets. This only makes sense with IP_FORWARD==1.
+ */
+#if !defined IP_NAPT || defined __DOXYGEN__
+#define IP_NAPT                         1
+#endif
+
+/**
+ * IP_NAPT_DYNAMIC==1: Saves the memory for the NAPT tables if not required.
+ * If NAPT is used, ip_napt_init() has to be called explicitly once.
+ */
+#if !defined IP_NAPT_DYNAMIC || defined __DOXYGEN__
+#define IP_NAPT_DYNAMIC                 0
 #endif
 
 /**

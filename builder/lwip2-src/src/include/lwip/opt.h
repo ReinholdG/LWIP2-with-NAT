@@ -646,7 +646,11 @@
  * interface, define this to 0.
  */
 #if !defined IP_FORWARD || defined __DOXYGEN__
-#define IP_FORWARD                      0
+#define IP_FORWARD                      1
+#endif
+
+#if !defined IP_NAPT || defined __DOXYGEN__
+#define IP_NAPT                         1
 #endif
 
 /**

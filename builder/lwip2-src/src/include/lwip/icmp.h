@@ -81,6 +81,9 @@ void icmp_input(struct pbuf *p, struct netif *inp);
 void icmp_dest_unreach(struct pbuf *p, enum icmp_dur_type t);
 void icmp_time_exceeded(struct pbuf *p, enum icmp_te_type t);
 
+#if IP_FORWARD
+void icmp_datagram_too_big(struct pbuf *p, u16_t mtu)ICACHE_FLASH_ATTR;
+#endif /* IP_FORWARD */
 #endif /* LWIP_IPV4 && LWIP_ICMP */
 
 #if LWIP_IPV4 && LWIP_IPV6
